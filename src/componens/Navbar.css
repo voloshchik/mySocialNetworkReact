@@ -1,0 +1,13 @@
+
+.nav {
+  grid-area: n;
+  background-color: green;
+}
+
+.item a{
+
+  font-size: 30px;
+ color: red;
+ text-decoration:none ;
+ 
+}
