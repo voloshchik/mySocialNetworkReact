@@ -8,7 +8,7 @@ const Navbar = () => {
           Profile
         </a>
       </div>
-      <div className={s.item}>
+      <div className={`${s.item} ${s.active}`}>
         <a href="">Messages </a>
       </div>
       <div className={s.item}>
