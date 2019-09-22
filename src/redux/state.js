@@ -27,5 +27,5 @@ let state = {
         ]
     }
 };
-
+console.log(state.profilePage)
 export default state;
