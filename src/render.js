@@ -6,7 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import {updateNewPostText} from './redux/state'
 import { addPost } from "./redux/state";
 
- export let rerenderEntireTree = (state) => {
+  let rerenderEntireTree = (state) => {
     ReactDOM.render(
         <App state={state} addPost={addPost} updateNewPostText={updateNewPostText} />,
         document.getElementById("root")
