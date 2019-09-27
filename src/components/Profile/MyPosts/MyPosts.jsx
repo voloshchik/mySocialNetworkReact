@@ -14,9 +14,9 @@ const MyPosts = props => {
         // alert(text);
     };
     let onPostChange = () => {
-        
+
          let text = newPostElement.current.value;
-    //   props.updateNewPostText(text)
+      props.updateNewPostText(text)
     };
     let newPostElement = React.createRef();
     return (
