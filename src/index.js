@@ -13,8 +13,8 @@ let rerenderEntireTree = state => {
     ReactDOM.render(
         <App
             state={store.getState()}
-            addPost={store.addPost}
-            updateNewPostText={store.updateNewPostText}
+            addPost={store.addPost.bind(store)}
+            updateNewPostText={store.updateNewPostText.bind(store)}
         />,
         document.getElementById("root")
     );

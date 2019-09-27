@@ -7,9 +7,10 @@ const MyPosts = props => {
         <Post message={p.message} likesCount={p.likesCount} />
     ));
     let addPost = () => {
+        debugger
         let text = newPostElement.current.value;
         props.addPost();
-       
+
         // alert(text);
     };
     let onPostChange = () => {
