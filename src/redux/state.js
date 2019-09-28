@@ -1,3 +1,6 @@
+const ADD_POST="ADD-POST"
+const UPDATE_NEW_POST_TEXT="UPDATE-NEW-POST-TEXT"
+ 
 let store = {
     _callSubcriber() {
         console.log("state change");
@@ -40,7 +43,7 @@ let store = {
         this._callSubcriber = observer;
     },
     dispatch(action) {
-        if (action.type === "ADD-POST") {
+        if (action.type ===ADD_POST ) {
             let newPost = {
                 id: 6,
                 message: this._state.profilePage.newPostText,
@@ -49,7 +52,7 @@ let store = {
             this._state.profilePage.posts.push(newPost);
             this._state.profilePage.newPostText = " ";
             this._callSubcriber(this._state);
-        } else if (action.type === "UPDATE-NEW-POST-TEXT") {
+        } else if (action.type === UPDATE_NEW_POST_TEXT) {
             this._state.profilePage.newPostText = action.newText;
             this._callSubcriber(this._state);
         }
@@ -57,5 +60,11 @@ let store = {
     updateNewPostText(newText) {},
     addPost() {}
 };
-
+export const addPostActionCreator=()=>{
+    return {type:"ADD-POST"}
+}
+ export const updateNewPostTextActionCreator=(text)=>{
+    return {type:"UPDATE-NEW-POST-TEXT",newText:text}
+}  
+window.store=store
 export default store;
