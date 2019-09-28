@@ -25,9 +25,9 @@ const App = props => {
                         render={() => (
                             
                             <Profile
-                            updateNewPostText={props.updateNewPostText}
+                            dispatch={props.dispatch}
                                 profilePage={props.state.profilePage}
-                                addPost={props.addPost}
+                               
                             />
                         )}
                     />

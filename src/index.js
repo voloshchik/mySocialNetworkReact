@@ -5,17 +5,12 @@ import App from "./App";
 
 import state, { subscribe } from "./redux/state";
 import * as serviceWorker from "./serviceWorker";
-import { updateNewPostText } from "./redux/state";
-import { addPost } from "./redux/state";
-import store from './redux/state'
+
+import store from "./redux/state";
 
 let rerenderEntireTree = state => {
     ReactDOM.render(
-        <App
-            state={store.getState()}
-            addPost={store.addPost.bind(store)}
-            updateNewPostText={store.updateNewPostText.bind(store)}
-        />,
+        <App state={store.getState()} dispatch={store.dispatch.bind(store)} />,
         document.getElementById("root")
     );
 };
