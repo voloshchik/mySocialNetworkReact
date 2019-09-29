@@ -35,7 +35,7 @@ let store = {
                 { id: 4, message: "Yo" },
                 { id: 5, message: "Yo" }
             ],
-            newMessageBody: " "
+            newMessageBody: " 3"
         }
     },
     getState() {
@@ -65,9 +65,11 @@ let store = {
             let body=this._state.dialogsPage.newMessageBody
             this._state.dialogsPage.newMessageBody=' '
             this._state.dialogsPage.messages.push({id: 6, message:body })
+            this._callSubcriber(this._state);
         }
     }
 };
+
 export const addPostActionCreator = () => {
     return { type: "ADD-POST" };
 };
@@ -75,6 +77,7 @@ export const updateNewPostTextActionCreator = text => {
     return { type: "UPDATE-NEW-POST-TEXT", newText: text };
 };
 export const sendMessageCreator = () => {
+
     return { type: "SEND_MESSAGE" };
 };
 export const updateNewMessageCreator = (body) => {
