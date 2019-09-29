@@ -58,7 +58,7 @@ let store = {
             this._state.profilePage.newPostText = action.newText;
             this._callSubcriber(this._state);
         } else if (action.type === UPDATE_MESSAGE_BODY) {
-            this._state.dialogsPage.newMessageBody = actoion.body;
+            this._state.dialogsPage.newMessageBody = action.body;
             this._callSubcriber(this._state);
         }
         else if(action.type===SEND_MESSAGE){
