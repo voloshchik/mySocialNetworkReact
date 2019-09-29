@@ -2,8 +2,14 @@ import React from "react";
 import s from "./Dialogs.module.css";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-
+import {}
 const Dialogs = props => {
+    let onSendMessageClick=(e)=>{
+        console.log(e.target)
+    }
+    let onNewMessageChenge=(e)=>{
+        console.log(e.target.value)
+    }
     let dialogsElements = props.state.dialogs.map(d => (
         <DialogItem name={d.name} id={d.id} />
     ));
@@ -18,10 +24,10 @@ const Dialogs = props => {
                 <div>{messagesElements}</div>
                 <div>
                     <div>
-                    <textarea placeholder="You enter message"></textarea>
+                        <textarea placeholder="You enter message" onChange={onNewMessageChenge}></textarea>
                     </div>
                     <div>
-                        <button>Send</button>
+                        <button onClick={onSendMessageClick}>Send</button>
                     </div>
                 </div>
             </div>
