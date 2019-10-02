@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 
-import state, { subscribe } from "./redux/store";
+import state, { subscribe } from "./redux/redux-store";
 import * as serviceWorker from "./serviceWorker";
 
 import store from "./redux/store";
