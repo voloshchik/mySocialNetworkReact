@@ -1,19 +1,25 @@
 const SEND_MESSAGE = "SEND_MESSAGE";
 const UPDATE_MESSAGE_BODY = "UPDATE_MESSAGE_BODY";
 
- const dialogsReducer=(state,action)=>{
-     if (action.type === UPDATE_MESSAGE_BODY) {
-        state.newMessageBody = action.body;
-       
+const dialogsReducer = (state, action) => {
+    switch (action.type) {
+        case UPDATE_MESSAGE_BODY:
+            state.newMessageBody = action.body;
+            return state;
+        case SEND_MESSAGE:
+            let body = state.newMessageBody;
+            state.newMessageBody = " ";
+            state.messages.push({ id: 6, message: body });
+            return state;
+        default:
+            return state;
     }
-    else if(action.type===SEND_MESSAGE){
-        let body=state.newMessageBody
-        state.newMessageBody=' '
-        state.messages.push({id: 6, message:body })
-        
-    }
+};
+export const sendMessageCreator = () => {
 
-    return state
-}
-
-export default dialogsReducer
+    return { type: "SEND_MESSAGE" };
+};
+export const updateNewMessageCreator = (body) => {
+    return { type: "UPDATE_MESSAGE_BODY",body:body };
+};
+export default dialogsReducer;
