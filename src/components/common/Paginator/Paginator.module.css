@@ -1,3 +1,35 @@
+
+
+
+.paginator {
+    width: 280px;
+    margin: 30px auto;
+    padding: 10px;
+  
+    white-space: nowrap;
+  
+    background-color: #ecf0f1;
+  }
+
+  
+
+.paginator span {
+  display: inline-block;
+  min-width: 20px;
+  height: 40px;
+  padding: 0 10px;
+
+  font-weight: bold;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  
+  text-decoration: none;
+
+  background-color: #95a5a6;
+}
+
 .selectedPage {
     font-weight: bold;
+    color:red
 }
