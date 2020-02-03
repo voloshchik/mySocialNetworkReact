@@ -1,17 +1,10 @@
-
-
-
 .paginator {
-    width: 280px;
-    margin: 30px auto;
-    padding: 10px;
-  
-    white-space: nowrap;
-  
-    background-color: #ecf0f1;
-  }
-
-  
+  width: 500px;
+  margin: 30px 100px;
+  padding: 10px;
+  white-space: nowrap;
+  background-color: #ecf0f1;
+}
 
 .paginator span {
   display: inline-block;
@@ -23,13 +16,13 @@
   line-height: 40px;
   vertical-align: middle;
   text-align: center;
-  
+
   text-decoration: none;
 
   background-color: #95a5a6;
 }
 
 .selectedPage {
-    font-weight: bold;
-    color:red
+  font-weight: bold;
+  color: red;
 }
